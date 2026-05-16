@@ -1,0 +1,291 @@
+.skills-section{
+  position: relative;
+  padding: 120px 20px;
+  background: #020617;
+  overflow: hidden;
+}
+
+.skills-container{
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
+  z-index: 10;
+}
+
+/* Glow */
+.skills-glow{
+  position: absolute;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  filter: blur(120px);
+}
+
+.skills-glow-1{
+  background: rgba(59,130,246,0.15);
+  top: 0;
+  left: -100px;
+}
+
+.skills-glow-2{
+  background: rgba(168,85,247,0.15);
+  bottom: 0;
+  right: -100px;
+}
+
+/* Heading */
+.skills-heading{
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.skills-heading h2{
+  font-size: clamp(2.8rem,7vw,5rem);
+  font-weight: 800;
+  color: white;
+}
+
+.skills-heading span{
+  background: linear-gradient(
+    to right,
+    #3b82f6,
+    #a855f7
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.skills-heading p{
+  max-width: 700px;
+  margin: 20px auto 0;
+  color: #94a3b8;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+/* Grid */
+.skills-grid{
+  display: grid;
+
+  grid-template-columns:
+  repeat(auto-fit,minmax(260px,1fr));
+
+  gap: 20px;
+}
+
+/* Card */
+.skill-card{
+  background: rgba(15,23,42,0.65);
+
+  backdrop-filter: blur(14px);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  padding: 20px;
+
+  border-radius: 22px;
+
+  transition: 0.4s;
+}
+
+.skill-card:hover{
+  transform: translateY(-8px);
+  border-color: #3b82f6;
+}
+
+/* Top */
+.skill-top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.skill-info{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.skill-icon{
+  width: 45px;
+  height: 45px;
+  border-radius: 14px;
+  background: rgba(59,130,246,0.12);
+  color: #3b82f6;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 1.2rem;
+}
+
+.skill-info h3{
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+}
+
+.skill-top span{
+  color: #3b82f6;
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+/* Progress */
+.progress-bar{
+  width: 100%;
+  height: 10px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.progress-fill{
+  height: 100%;
+  border-radius: 50px;
+
+  background: linear-gradient(
+    to right,
+    #3b82f6,
+    #8b5cf6
+  );
+
+  box-shadow: 0 0 20px rgba(59,130,246,0.5);
+}
+
+/* Responsive */
+@media(max-width: 768px){
+
+  .skills-section{
+    padding: 90px 15px;
+  }
+
+  .skill-card{
+    padding: 18px;
+  }
+
+  .skill-info h3{
+    font-size: 0.95rem;
+  }
+}
+
+@media(max-width: 480px){
+
+  .skills-heading h2{
+    font-size: 2.5rem;
+  }
+
+  .skill-top{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .skill-top span{
+    margin-left: 58px;
+  }
+}
+
+/* =========================
+   POPUP MODAL
+========================= */
+
+.skill-popup-overlay{
+  position: fixed;
+  inset: 0;
+
+  background: rgba(0,0,0,0.7);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 999;
+
+  padding: 20px;
+}
+
+.skill-popup{
+  width: 100%;
+  max-width: 420px;
+
+  background: #0f172a;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  border-radius: 24px;
+
+  padding: 35px 30px;
+
+  text-align: center;
+
+  box-shadow: 0 0 40px rgba(59,130,246,0.2);
+}
+
+.popup-icon{
+  width: 80px;
+  height: 80px;
+
+  margin: auto;
+  margin-bottom: 20px;
+
+  border-radius: 20px;
+
+  background: rgba(59,130,246,0.15);
+
+  color: #3b82f6;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 2rem;
+}
+
+.skill-popup h3{
+  font-size: 1.7rem;
+  color: white;
+  margin-bottom: 15px;
+}
+
+.skill-popup p{
+  color: #94a3b8;
+  line-height: 1.8;
+  font-size: 1rem;
+}
+
+.popup-close-btn{
+  margin-top: 25px;
+
+  border: none;
+
+  padding: 14px 28px;
+
+  border-radius: 14px;
+
+  background: linear-gradient(
+    to right,
+    #2563eb,
+    #9333ea
+  );
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.popup-close-btn:hover{
+  transform: translateY(-3px);
+}
+
+.skill-card{
+  cursor: pointer;
+}

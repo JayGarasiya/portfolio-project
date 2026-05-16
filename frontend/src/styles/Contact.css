@@ -1,0 +1,210 @@
+/* =========================
+   CONTACT PAGE
+========================= */
+
+.contact-page-main{
+  position: relative;
+  min-height: 100vh;
+  background: #020617;
+  padding: 120px 20px;
+  overflow: hidden;
+}
+
+/* =========================
+   GLOW
+========================= */
+
+.contact-page-glow-left{
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  width: 320px;
+  height: 320px;
+  background: rgba(59,130,246,0.15);
+  border-radius: 50%;
+  filter: blur(120px);
+}
+
+.contact-page-glow-right{
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  width: 320px;
+  height: 320px;
+  background: rgba(168,85,247,0.15);
+  border-radius: 50%;
+  filter: blur(120px);
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.contact-page-container{
+  max-width: 750px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+/* =========================
+   HEADING
+========================= */
+
+.contact-page-heading{
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.contact-page-heading h1{
+  font-size: clamp(3rem,7vw,5.5rem);
+  font-weight: 800;
+  color: white;
+}
+
+.contact-page-heading span{
+  background: linear-gradient(
+    to right,
+    #3b82f6,
+    #a855f7
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-page-heading p{
+  margin-top: 18px;
+  color: #94a3b8;
+  font-size: 18px;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.contact-page-form{
+  background: rgba(15,23,42,0.7);
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  border-radius: 24px;
+
+  backdrop-filter: blur(12px);
+
+  padding: 35px;
+}
+
+/* =========================
+   INPUT GROUP
+========================= */
+
+.contact-page-input-group{
+  margin-bottom: 24px;
+}
+
+.contact-page-input-group label{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  color: white;
+
+  margin-bottom: 12px;
+
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.contact-page-input-group input,
+.contact-page-input-group textarea{
+  width: 100%;
+
+  background: #0f172a;
+
+  border: 1px solid rgba(255,255,255,0.08);
+
+  border-radius: 16px;
+
+  padding: 16px 18px;
+
+  color: white;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition: 0.3s;
+
+  box-sizing: border-box;
+}
+
+.contact-page-input-group input:focus,
+.contact-page-input-group textarea:focus{
+  border-color: #3b82f6;
+
+  box-shadow: 0 0 0 3px rgba(59,130,246,0.15);
+}
+
+.contact-page-input-group textarea{
+  resize: none;
+  min-height: 180px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.contact-page-btn{
+  width: 100%;
+
+  border: none;
+
+  padding: 16px;
+
+  border-radius: 16px;
+
+  background: linear-gradient(
+    to right,
+    #2563eb,
+    #9333ea
+  );
+
+  color: white;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.contact-page-btn:hover{
+  transform: translateY(-3px);
+  opacity: 0.95;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width: 768px){
+
+  .contact-page-main{
+    padding: 100px 15px;
+  }
+
+  .contact-page-form{
+    padding: 25px;
+  }
+
+  .contact-page-heading h1{
+    font-size: 3rem;
+  }
+}

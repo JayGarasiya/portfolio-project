@@ -1,0 +1,159 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* =========================
+   GLOBAL RESET
+========================= */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+/* =========================
+   HTML
+========================= */
+
+html {
+  width: 100%;
+
+  scroll-behavior: auto;
+  scroll-padding-top: 80px;
+
+  overflow-x: hidden;
+}
+
+/* =========================
+   BODY
+========================= */
+
+body {
+  width: 100%;
+  min-height: 100vh;
+
+  background: #020617;
+  color: white;
+
+  font-family: "Inter", sans-serif;
+
+  overflow-x: hidden;
+}
+
+/* =========================
+   ROOT
+========================= */
+
+#root {
+  width: 100%;
+
+  overflow-x: hidden;
+}
+
+/* =========================
+   MEDIA
+========================= */
+
+img,
+video,
+canvas,
+svg {
+  max-width: 100%;
+
+  display: block;
+}
+
+/* =========================
+   FORM ELEMENTS
+========================= */
+
+input,
+textarea,
+button {
+  font-family: inherit;
+}
+
+/* =========================
+   SELECTION
+========================= */
+
+::selection {
+  background: #3b82f6;
+  color: white;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.4);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+
+  border-radius: 999px;
+
+  border: 2px solid transparent;
+
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #1d4ed8;
+
+  background-clip: content-box;
+}
+
+/* Firefox */
+
+* {
+  scrollbar-width: thin;
+
+  scrollbar-color:
+    #3b82f6
+    rgba(15, 23, 42, 0.4);
+}
+
+/* =========================
+   LENIS
+========================= */
+
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}

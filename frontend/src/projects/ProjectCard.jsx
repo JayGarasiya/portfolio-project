@@ -1,0 +1,2 @@
+<ProjectCard project={project} />
+
